@@ -5,8 +5,6 @@ template <typename T>
 class Deque
 {
 public:
-	Deque() : m_list() { }
-	Deque(const Deque<T>& deque) : m_list(deque.m_list) { }
 	Deque(Deque<T>&& deque) : m_list(std::move(deque.m_list)) { }
 	~Deque() { m_list.~List(); }
 
